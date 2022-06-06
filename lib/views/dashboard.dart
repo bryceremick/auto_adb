@@ -1,5 +1,6 @@
+import 'package:auto_adb/components/ip_address_form.dart';
 import 'package:flutter/material.dart';
-import '../components/ip_address.dart';
+import '../components/ip_address_form.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key, required this.title}) : super(key: key);
@@ -35,31 +36,25 @@ class _DashboardState extends State<Dashboard> {
               ),
             ),
           ),
-          child: Column(
+          child: Row(
             children: [
               Expanded(
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          border: Border(
-                            right: BorderSide(
-                              width: 1,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        child: const Center(
-                          child: IpAddress(),
-                        ),
+                child: Container(
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      right: BorderSide(
+                        width: 1,
+                        color: Colors.red,
                       ),
                     ),
-                    const Expanded(
-                      child: Text('Right', textAlign: TextAlign.center),
-                    ),
-                  ],
+                  ),
+                  alignment: Alignment.centerLeft,
+                  padding: const EdgeInsets.only(left: 20),
+                  child: const IpAddressForm(),
                 ),
+              ),
+              const Expanded(
+                child: Text('Right', textAlign: TextAlign.center),
               ),
             ],
           ),

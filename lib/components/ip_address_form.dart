@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
-class IpAddress extends StatefulWidget {
-  const IpAddress({Key? key}) : super(key: key);
+class IpAddressForm extends StatefulWidget {
+  const IpAddressForm({Key? key}) : super(key: key);
 
   @override
-  State<IpAddress> createState() => _IpAddressState();
+  State<IpAddressForm> createState() => _IpAddressFormState();
 }
 
-class _IpAddressState extends State<IpAddress> {
+class _IpAddressFormState extends State<IpAddressForm> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return FractionallySizedBox(
+      widthFactor: 0.5,
+      heightFactor: 0.75,
       child: Column(
         children: const [
           Expanded(
